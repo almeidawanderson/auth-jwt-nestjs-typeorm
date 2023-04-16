@@ -25,5 +25,8 @@ const signature = crypt.createHmac('sha256', key)
 
 console.log('jwt gerado:', `${headerEncoded}.${payloadEncoded}.${base64Url(signature)}`)
 
+//secret-key: chave pessoal, geralmente fica nos arquivos .env
+//passport nos ajudara na criação desse token
+
       
       
