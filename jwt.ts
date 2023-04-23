@@ -18,7 +18,8 @@ const payloadEncoded = base64Url.encode(JSON.stringify(payload))
 
 const crypt = require('crypto')
 
-const signature = crypt.createHmac('sha256', key)
+const signature = crypt
+      .createHmac('sha256', key)
       .update(`${headerEncoded}. ${payloadEncoded}`)
       .digest('bin')
 
